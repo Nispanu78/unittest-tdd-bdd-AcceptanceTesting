@@ -1,6 +1,6 @@
 import unittest
 
-# assertGreaterEqual(a, b, msg=Non
+# assertGreaterEqual(a, b, msg=None)
 def test_assert_greater_equal(self):
     self.assertGreaterEqual(2, 2)
 

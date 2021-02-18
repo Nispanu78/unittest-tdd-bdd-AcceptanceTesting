@@ -1,5 +1,6 @@
 import unittest
 
+# assertAlmostEqual(x, y, places=None, msg=None, delta=None)
 def test_assert_almost_equal_delta_0_5(self):
     self.assertAlmostEqual(1, 1.2, delta=0.5)
 
