@@ -1,6 +1,7 @@
 import unittest
 from calculator import Calculate
 
+# assertAlmostEqual(x, y, places=None, msg=None, delta=None)
 class TestCalculate(unittest.TestCase):
     def setUp(self):
         self.calc = Calculate()
