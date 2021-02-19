@@ -7,6 +7,8 @@ class TestCalculate(unittest.TestCase):
         self.calc = Calculate()
 
     def test_add_method_returns_correct_result(self):
+        print("Hello!")
+        self.assertAlmostEqual(1, 1)
         self.assertEqual(self.calc.add(2, 2), 4)
 
     def test_add_method_raises_typeerror_if_not_ints(self):
