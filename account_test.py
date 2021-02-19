@@ -1,9 +1,15 @@
 import unittest
-from mock import Mock
+from mock import Mock, patch
 from account import Account, ConnectionError
 
 
 class TestAccount(unittest.TestCase):
+    @patch('account.requests')
+    def test_get_current_balance_returns_data_correctly(self, mock_requests):
+        mock_requests.get_return_value = '500'
+        account = Account(Mock())
+        self.assertEqual('500', account.get_current_balance('1'))
+
     def test_account_returns_data_for_id_1(self):
         account_data = {"id": "1", "name": "test"}
         mock_data_interface = Mock()
