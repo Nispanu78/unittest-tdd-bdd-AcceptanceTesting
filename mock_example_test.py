@@ -1,6 +1,7 @@
 import unittest
 from mock import Mock
 
+
 class TestMocking(unittest.TestCase):
     def test_mock_method_returns(self):
         my_mock = Mock()
@@ -9,4 +10,4 @@ class TestMocking(unittest.TestCase):
 
 
 if __name__ == '__main__':
-unittest.main()
+    unittest.main()
