@@ -3,7 +3,8 @@ class Calculate(object):
         """Takes two integers and adds them together to produce
         the result.
 
-        >>> c = Calculate()
+        >>> c.add(2, 2)
+        4
         >>> c.add(1.0, 1.0)
         Traceback (most recent call last):
         ...
@@ -18,8 +19,8 @@ class Calculate(object):
             raise TypeError("Invalid type: {} and {}".format(type(x), type(y)))
 
 if __name__ == '__main__':
-    # calc = Calculate()
+
     # result = calc.add("Hello", "World!")
     # print (result)
     import doctest
-    doctest.testmod()
+    doctest.testmod(extraglobs={'c': Calculate()})
