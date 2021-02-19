@@ -9,7 +9,7 @@ class TestCalculate(unittest.TestCase):
     def test_add_method_returns_correct_result(self):
         print("Hello!")
         self.assertAlmostEqual(1, 1)
-        self.assertEqual(self.calc.add(2, 2), 4)
+        self.assertEqual(self.calc.add(2, 2), 5)
 
     def test_add_method_raises_typeerror_if_not_ints(self):
         self.assertRaises(TypeError, self.calc.add, "Hello", "World")
