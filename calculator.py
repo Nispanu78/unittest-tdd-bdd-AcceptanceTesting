@@ -4,12 +4,14 @@ class Calculate(object):
         the result.
 
         >>> c = Calculate()
-        >>> c.add(1, 1)
-        2
+        >>> c.add(1.0, 1.0)
+        Traceback (most recent call last):
+        ...
+        TypeError: Invalid type: <type 'float'> and <type 'float'>
         >>> c.add(25, 125)
         150
         """
-        
+
         if type(x) == int and type(y) == int:
             return x + y
         else:
