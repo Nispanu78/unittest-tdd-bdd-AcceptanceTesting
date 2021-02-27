@@ -1,0 +1,16 @@
+*** Settings ***
+Documentation     Step definitions
+
+*** Variables ***
+${HOME URL}       ''
+
+*** Keywords ***
+I create the account ${account_number} with balance ${balance}
+    Create_Account    ${account_number}    ${balance}
+
+I retrieve the account ${account_number}
+    Visit_Homepage
+    Enter_Account    ${account_number}
+
+the balance should be ${balance}
+    Get_Balance     ${balance}
