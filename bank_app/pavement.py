@@ -1,6 +1,7 @@
 from paver.tasks import task, BuildFailure, needs
 from paver.easy import sh
 
+
 @task
 def unit_tests():
     sh('nosetests --with-coverage test/unit')
