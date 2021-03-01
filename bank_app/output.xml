@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20210228 11:54:13.412" generator="Robot 2.8.4 (Python 2.7.16 on darwin)">
+<suite source="/Users/nisp78/Desktop/testing/bank_app/test/robot" id="s1" name="Robot">
+<suite source="/Users/nisp78/Desktop/testing/bank_app/test/robot/tests" id="s1-s1" name="Tests">
+<suite source="/Users/nisp78/Desktop/testing/bank_app/test/robot/tests/bank.txt" id="s1-s1-s1" name="Bank">
+<test id="s1-s1-s1-t1" name="Retrieve customer balance">
+<kw type="kw" name="steps.Given I create the account 1111 with balance 50">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="robotLibrary.Create Account">
+<doc></doc>
+<arguments>
+<arg>${account_number}</arg>
+<arg>${balance}</arg>
+</arguments>
+<status status="PASS" endtime="20210228 11:54:14.709" starttime="20210228 11:54:14.709"></status>
+</kw>
+<status status="PASS" endtime="20210228 11:54:14.709" starttime="20210228 11:54:14.708"></status>
+</kw>
+<kw type="kw" name="steps.When I retrieve the account 1111">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="robotLibrary.Visit Homepage">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20210228 11:54:14.730" starttime="20210228 11:54:14.709"></status>
+</kw>
+<kw type="kw" name="robotLibrary.Enter Account">
+<doc></doc>
+<arguments>
+<arg>${account_number}</arg>
+</arguments>
+<status status="PASS" endtime="20210228 11:54:14.732" starttime="20210228 11:54:14.730"></status>
+</kw>
+<status status="PASS" endtime="20210228 11:54:14.732" starttime="20210228 11:54:14.709"></status>
+</kw>
+<kw type="kw" name="steps.And the balance should be 1000">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="robotLibrary.Get Balance">
+<doc></doc>
+<arguments>
+<arg>${balance}</arg>
+</arguments>
+<msg timestamp="20210228 11:54:14.734" level="FAIL">'Balance: 1000' not found in u'&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Bank App&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;form id="account-form"&gt;\n      &lt;label&gt;Account Number: &lt;/label&gt;\n      &lt;input name="account_number" type="text"/&gt;\n      &lt;input type="submit"/&gt;\n    &lt;/form&gt;\n\n    \n    Balance: 50\n    \n\n  &lt;/body&gt;\n&lt;/html&gt;'</msg>
+<status status="FAIL" endtime="20210228 11:54:14.734" starttime="20210228 11:54:14.733"></status>
+</kw>
+<status status="FAIL" endtime="20210228 11:54:14.734" starttime="20210228 11:54:14.733"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20210228 11:54:14.734" critical="yes" starttime="20210228 11:54:14.707">'Balance: 1000' not found in u'&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Bank App&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;form id="account-form"&gt;\n      &lt;label&gt;Account Number: &lt;/label&gt;\n      &lt;input name="account_number" type="text"/&gt;\n      &lt;input type="submit"/&gt;\n    &lt;/form&gt;\n\n    \n    Balance: 50\n    \n\n  &lt;/body&gt;\n&lt;/html&gt;'</status>
+</test>
+<doc>Example Robot tests for
+Bank application</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20210228 11:54:14.734" starttime="20210228 11:54:13.515"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20210228 11:54:14.735" starttime="20210228 11:54:13.513"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20210228 11:54:14.735" starttime="20210228 11:54:13.412"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Robot">Robot</stat>
+<stat fail="1" pass="0" id="s1-s1" name="Tests">Robot.Tests</stat>
+<stat fail="1" pass="0" id="s1-s1-s1" name="Bank">Robot.Tests.Bank</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
