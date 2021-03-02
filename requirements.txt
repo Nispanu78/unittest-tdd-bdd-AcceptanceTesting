@@ -1,0 +1,12 @@
+robotframework==2.8.4
+nose
+nose-cov
+rednose
+pytest
+pytest-cov
+mock
+requests
+lettuce
+webtest
+Flask
+pylint
